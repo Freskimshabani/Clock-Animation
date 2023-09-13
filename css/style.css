@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all ease 0.5s;
+}
+
+:root {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#ClockDisplay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ClockDisplay--Digits {
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 5rem;
+}
+
+#ClockOverlay {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(0deg, white, white, white, transparent, white);
+}
+
+.row--box {
+    display: flex;
+}
+
+.number--digit {
+    padding: 0;
+    margin: 0;
+    font-size: 10rem;
+}
