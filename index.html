@@ -7,45 +7,211 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/retro.js" defer></script>
+    <script src="js/themeSwitcher.js" defer></script>
+    <script src="js/analog.js" defer></script>
 </head>
 
 <body>
+    <nav id="Clock--Theme--Switcher" class="row--box">
+        <button id="Classic--Clock__Button" class="theme--button">Classic</button>
+        <button id="Retro--Clock__Button" class="theme--button">Retro</button>
+        <button id="Flip--Clock__Button" class="theme--button">Flip</button>
+        <button id="Analog--Clock__Button" class="theme--button">Analog</button>
+    </nav>
     <main class="row--box">
-        <section id="ClockDisplay">
-            <span id="ClockDisplay--Digits" class="row--box">
-                <span id="Hours" class="row--box">
-                    <span id="Hour__Digit--1__Span" class="column--box">
-                        <h1 id="Hour__Digit--1__Prev" class="number--digit">1</h1>
-                        <h1 id="Hour__Digit--1" class="number--digit">0</h1>
+        <section id="Classic--Clock">
+            <section id="Classic--ClockDisplay">
+                <span id="Classic--ClockDisplay--Digits" class="row--box">
+                    <span id="Classic--Hours" class="row--box">
+                        <span id="Classic--Hour__Digit--1__Span" class="column--box">
+                            <h1 id="Classic--Hour__Digit--1__Prev" class="number--digit">1</h1>
+                            <h1 id="Classic--Hour__Digit--1" class="number--digit">0</h1>
+                        </span>
+                        <span id="Classic--Hour__Digit--2__Span" class="column--box">
+                            <h1 id="Classic--Hour__Digit--2__Prev" class="number--digit">1</h1>
+                            <h1 id="Classic--Hour__Digit--2" class="number--digit">0</h1>
+                        </span>
                     </span>
-                    <span id="Hour__Digit--2__Span" class="column--box">
-                        <h1 id="Hour__Digit--2__Prev" class="number--digit">1</h1>
-                        <h1 id="Hour__Digit--2" class="number--digit">0</h1>
+                    <h1 class="number--digit">:</h1>
+                    <span id="Classic--Minutes" class="row--box">
+                        <span id="Classic--Minute__Digit--1__Span" class="column--box">
+                            <h1 id="Classic--Minute__Digit--1__Prev" class="number--digit">0</h1>
+                            <h1 id="Classic--Minute__Digit--1" class="number--digit">0</h1>
+                        </span>
+                        <span id="Classic--Minute__Digit--2__Span" class="column--box">
+                            <h1 id="Classic--Minute__Digit--2__Prev" class="number--digit">0</h1>
+                            <h1 id="Classic--Minute__Digit--2" class="number--digit">0</h1>
+                        </span>
+                    </span>
+                    <h1 class="number--digit">:</h1>
+                    <span id="Classic--Seconds" class="row--box">
+                        <span id="Classic--Second__Digit--1__Span" class="column--box">
+                            <h1 id="Classic--Second__Digit--1__Prev" class="number--digit">0</h1>
+                            <h1 id="Classic--Second__Digit--1" class="number--digit">0</h1>
+                        </span>
+                        <span id="Classic--Second__Digit--2__Span" class="column--box">
+                            <h1 id="Classic--Second__Digit--2__Prev" class="number--digit">0</h1>
+                            <h1 id="Classic--Second__Digit--2" class="number--digit">0</h1>
+                        </span>
                     </span>
                 </span>
-                <h1 class="number--digit">:</h1>
-                <span id="Minutes" class="row--box">
-                    <span id="Minute__Digit--1__Span" class="column--box">
-                        <h1 id="Minute__Digit--1__Prev" class="number--digit">0</h1>
-                        <h1 id="Minute__Digit--1" class="number--digit">0</h1>
+            </section>
+        </section>
+        <section id="Retro--Clock" class="hide">
+            <section id="Retro--ClockDisplay">
+                <span id="Retro--ClockDisplay--Digits" class="row--box">
+                    <span id="Retro--Hours" class="retro--span row--box">
+                        <span id="Retro--Hour__Span--1" class="retro--digit">
+                            <svg version="1.1" id="Retro--Hour__Digit--1" class="retro--digit__svg"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                                <polygon id="Segment__1" class="retro--segment retro--on"
+                                    points="385.3,44.5 385.3,226.1 364.7,246.8 344,226.1 344,44.5 364.7,23.9 " />
+                                <polygon id="Segment__2" class="retro--segment retro--on"
+                                    points="156,44.5 156,226.1 135.3,246.8 114.7,226.1 114.7,44.5 135.3,23.9 " />
+                                <polygon id="Segment__3" class="retro--segment retro--on"
+                                    points="361.4,20.6 340.8,41.3 159.2,41.3 138.6,20.6 159.2,0 340.8,0 " />
+                                <polygon id="Segment__4" class="retro--segment retro--on"
+                                    points="361.4,250 340.8,270.6 159.2,270.6 138.6,250 159.2,229.4 340.8,229.4 " />
+                                <polygon id="Segment__5" class="retro--segment retro--on"
+                                    points="385.3,273.9 385.3,455.5 364.7,476.1 344,455.5 344,273.9 364.7,253.2 " />
+                                <polygon id="Segment__6" class="retro--segment retro--on"
+                                    points="156,273.9 156,455.5 135.3,476.1 114.7,455.5 114.7,273.9 135.3,253.2 " />
+                                <polygon id="Segment__7" class="retro--segment retro--on"
+                                    points="361.4,479.4 340.8,500 159.2,500 138.6,479.4 159.2,458.7 340.8,458.7 " />
+                            </svg>
+                        </span>
+                        <span id="Retro--Hour__Span--2" class="retro--digit">
+                            <svg version="1.1" id="Retro--Hour__Digit--2" class="retro--digit__svg"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                                <polygon id="Segment__1" class="retro--segment retro--on"
+                                    points="385.3,44.5 385.3,226.1 364.7,246.8 344,226.1 344,44.5 364.7,23.9 " />
+                                <polygon id="Segment__2" class="retro--segment retro--on"
+                                    points="156,44.5 156,226.1 135.3,246.8 114.7,226.1 114.7,44.5 135.3,23.9 " />
+                                <polygon id="Segment__3" class="retro--segment retro--on"
+                                    points="361.4,20.6 340.8,41.3 159.2,41.3 138.6,20.6 159.2,0 340.8,0 " />
+                                <polygon id="Segment__4" class="retro--segment retro--on"
+                                    points="361.4,250 340.8,270.6 159.2,270.6 138.6,250 159.2,229.4 340.8,229.4 " />
+                                <polygon id="Segment__5" class="retro--segment retro--on"
+                                    points="385.3,273.9 385.3,455.5 364.7,476.1 344,455.5 344,273.9 364.7,253.2 " />
+                                <polygon id="Segment__6" class="retro--segment retro--on"
+                                    points="156,273.9 156,455.5 135.3,476.1 114.7,455.5 114.7,273.9 135.3,253.2 " />
+                                <polygon id="Segment__7" class="retro--segment retro--on"
+                                    points="361.4,479.4 340.8,500 159.2,500 138.6,479.4 159.2,458.7 340.8,458.7 " />
+                            </svg>
+                        </span>
                     </span>
-                    <span id="Minute__Digit--2__Span" class="column--box">
-                        <h1 id="Minute__Digit--2__Prev" class="number--digit">0</h1>
-                        <h1 id="Minute__Digit--2" class="number--digit">0</h1>
+                    <h1 class="number--digit retro--on">:</h1>
+                    <span id="Retro--Minutes" class="retro--span row--box">
+                        <span id="Retro--Minute__Span--1" class="retro--digit row--box">
+                            <svg version="1.1" id="Retro--Minute__Digit--1" class="retro--digit__svg"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                                <polygon id="Segment__1" class="retro--segment retro--on"
+                                    points="385.3,44.5 385.3,226.1 364.7,246.8 344,226.1 344,44.5 364.7,23.9 " />
+                                <polygon id="Segment__2" class="retro--segment retro--on"
+                                    points="156,44.5 156,226.1 135.3,246.8 114.7,226.1 114.7,44.5 135.3,23.9 " />
+                                <polygon id="Segment__3" class="retro--segment retro--on"
+                                    points="361.4,20.6 340.8,41.3 159.2,41.3 138.6,20.6 159.2,0 340.8,0 " />
+                                <polygon id="Segment__4" class="retro--segment retro--on"
+                                    points="361.4,250 340.8,270.6 159.2,270.6 138.6,250 159.2,229.4 340.8,229.4 " />
+                                <polygon id="Segment__5" class="retro--segment retro--on"
+                                    points="385.3,273.9 385.3,455.5 364.7,476.1 344,455.5 344,273.9 364.7,253.2 " />
+                                <polygon id="Segment__6" class="retro--segment retro--on"
+                                    points="156,273.9 156,455.5 135.3,476.1 114.7,455.5 114.7,273.9 135.3,253.2 " />
+                                <polygon id="Segment__7" class="retro--segment retro--on"
+                                    points="361.4,479.4 340.8,500 159.2,500 138.6,479.4 159.2,458.7 340.8,458.7 " />
+                            </svg>
+                        </span>
+                        <span id="Retro--Minute__Span--2" class="retro--digit row--box">
+                            <svg version="1.1" id="Retro--Minute__Digit--2" class="retro--digit__svg"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                                <polygon id="Segment__1" class="retro--segment retro--on"
+                                    points="385.3,44.5 385.3,226.1 364.7,246.8 344,226.1 344,44.5 364.7,23.9 " />
+                                <polygon id="Segment__2" class="retro--segment retro--on"
+                                    points="156,44.5 156,226.1 135.3,246.8 114.7,226.1 114.7,44.5 135.3,23.9 " />
+                                <polygon id="Segment__3" class="retro--segment retro--on"
+                                    points="361.4,20.6 340.8,41.3 159.2,41.3 138.6,20.6 159.2,0 340.8,0 " />
+                                <polygon id="Segment__4" class="retro--segment retro--on"
+                                    points="361.4,250 340.8,270.6 159.2,270.6 138.6,250 159.2,229.4 340.8,229.4 " />
+                                <polygon id="Segment__5" class="retro--segment retro--on"
+                                    points="385.3,273.9 385.3,455.5 364.7,476.1 344,455.5 344,273.9 364.7,253.2 " />
+                                <polygon id="Segment__6" class="retro--segment retro--on"
+                                    points="156,273.9 156,455.5 135.3,476.1 114.7,455.5 114.7,273.9 135.3,253.2 " />
+                                <polygon id="Segment__7" class="retro--segment retro--on"
+                                    points="361.4,479.4 340.8,500 159.2,500 138.6,479.4 159.2,458.7 340.8,458.7 " />
+                            </svg>
+                        </span>
+                    </span>
+                    <h1 class="number--digit retro--on">:</h1>
+                    <span id="Retro--Seconds" class="retro--span row--box">
+                        <span id="Retro--Second__Span--1" class="retro--digit row--box">
+                            <svg version="1.1" id="Retro--Second__Digit--1" class="retro--digit__svg"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                                <polygon id="Segment__1" class="retro--segment retro--on"
+                                    points="385.3,44.5 385.3,226.1 364.7,246.8 344,226.1 344,44.5 364.7,23.9 " />
+                                <polygon id="Segment__2" class="retro--segment retro--on"
+                                    points="156,44.5 156,226.1 135.3,246.8 114.7,226.1 114.7,44.5 135.3,23.9 " />
+                                <polygon id="Segment__3" class="retro--segment retro--on"
+                                    points="361.4,20.6 340.8,41.3 159.2,41.3 138.6,20.6 159.2,0 340.8,0 " />
+                                <polygon id="Segment__4" class="retro--segment retro--on"
+                                    points="361.4,250 340.8,270.6 159.2,270.6 138.6,250 159.2,229.4 340.8,229.4 " />
+                                <polygon id="Segment__5" class="retro--segment retro--on"
+                                    points="385.3,273.9 385.3,455.5 364.7,476.1 344,455.5 344,273.9 364.7,253.2 " />
+                                <polygon id="Segment__6" class="retro--segment retro--on"
+                                    points="156,273.9 156,455.5 135.3,476.1 114.7,455.5 114.7,273.9 135.3,253.2 " />
+                                <polygon id="Segment__7" class="retro--segment retro--on"
+                                    points="361.4,479.4 340.8,500 159.2,500 138.6,479.4 159.2,458.7 340.8,458.7 " />
+                            </svg>
+                        </span>
+                        <span id="Retro--Second__Span--2" class="retro--digit row--box">
+                            <svg version="1.1" id="Retro--Second__Digit--2" class="retro--digit__svg"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                                <polygon id="Segment__1" class="retro--segment retro--on"
+                                    points="385.3,44.5 385.3,226.1 364.7,246.8 344,226.1 344,44.5 364.7,23.9 " />
+                                <polygon id="Segment__2" class="retro--segment retro--on"
+                                    points="156,44.5 156,226.1 135.3,246.8 114.7,226.1 114.7,44.5 135.3,23.9 " />
+                                <polygon id="Segment__3" class="retro--segment retro--on"
+                                    points="361.4,20.6 340.8,41.3 159.2,41.3 138.6,20.6 159.2,0 340.8,0 " />
+                                <polygon id="Segment__4" class="retro--segment retro--on"
+                                    points="361.4,250 340.8,270.6 159.2,270.6 138.6,250 159.2,229.4 340.8,229.4 " />
+                                <polygon id="Segment__5" class="retro--segment retro--on"
+                                    points="385.3,273.9 385.3,455.5 364.7,476.1 344,455.5 344,273.9 364.7,253.2 " />
+                                <polygon id="Segment__6" class="retro--segment retro--on"
+                                    points="156,273.9 156,455.5 135.3,476.1 114.7,455.5 114.7,273.9 135.3,253.2 " />
+                                <polygon id="Segment__7" class="retro--segment retro--on"
+                                    points="361.4,479.4 340.8,500 159.2,500 138.6,479.4 159.2,458.7 340.8,458.7 " />
+                            </svg>
+                        </span>
                     </span>
                 </span>
-                <h1 class="number--digit">:</h1>
-                <span id="Seconds" class="row--box">
-                    <span id="Second__Digit--1__Span" class="column--box">
-                        <h1 id="Second__Digit--1__Prev" class="number--digit">0</h1>
-                        <h1 id="Second__Digit--1" class="number--digit">0</h1>
-                    </span>
-                    <span id="Second__Digit--2__Span" class="column--box">
-                        <h1 id="Second__Digit--2__Prev" class="number--digit">0</h1>
-                        <h1 id="Second__Digit--2" class="number--digit">0</h1>
-                    </span>
-                </span>
-            </span>
+            </section>
+        </section>
+        <section id="Analog--Clock">
+            <section id="Analog--Clock__Hands">
+                <div id="Analog--Clock__Hour--Hand" class="analog--clock__hand"></div>
+                <div id="Analog--Clock__Minute--Hand" class="analog--clock__hand"></div>
+                <div id="Analog--Clock__Second--Hand" class="analog--clock__hand"></div>
+            </section>
+            <section id="Analog--Clock__Numbers">
+                <h1 id="Analog--1" class="analog--digit">1</h1>
+                <h1 id="Analog--2" class="analog--digit">2</h1>
+                <h1 id="Analog--3" class="analog--digit">3</h1>
+                <h1 id="Analog--4" class="analog--digit">4</h1>
+                <h1 id="Analog--5" class="analog--digit">5</h1>
+                <h1 id="Analog--6" class="analog--digit">6</h1>
+                <h1 id="Analog--7" class="analog--digit">7</h1>
+                <h1 id="Analog--8" class="analog--digit">8</h1>
+                <h1 id="Analog--9" class="analog--digit">9</h1>
+                <h1 id="Analog--10" class="analog--digit">10</h1>
+                <h1 id="Analog--11" class="analog--digit">11</h1>
+                <h1 id="Analog--12" class="analog--digit">12</h1>
+            </section>
         </section>
     </main>
 </body>

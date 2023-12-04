@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all ease 0.5s;
+    transition: all ease 0.3s;
 }
 
 :root {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    --retroMainClr: #ff9900;
+    --retroBgClr: #151515;
+    --retroNeutralClr: #181818;
 }
 
 body {
     width: 100dvw;
     height: 100dvh;
+    position: relative;
+    overflow: none;
 }
 
 main {
@@ -21,9 +28,20 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: none;
 }
 
-#ClockDisplay {
+#Clock--Theme--Switcher {
+    position: absolute;
+    z-index: 10001;
+    top: 5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#Classic--ClockDisplay {
     position: relative;
     width: 100%;
     height: 100%;
@@ -32,19 +50,163 @@ main {
     align-items: center;
 }
 
-#ClockDisplay--Digits {
+#Classic--ClockDisplay--Digits {
     position: relative;
     justify-content: center;
     align-items: flex-end;
     bottom: 5rem;
 }
 
-#ClockOverlay {
+#Classic--ClockOverlay {
     position: absolute;
     display: flex;
     min-width: 100%;
     min-height: 100%;
     background-image: linear-gradient(0deg, white, white, white, transparent, white);
+}
+
+#Retro--Clock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--retroBgClr);
+}
+
+#Retro--ClockDisplay {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Retro--ClockDisplay--Digits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Analog--Clock {
+    font-family: Poppins, sans-serif;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    color: #eee;
+}
+
+#Analog--Clock__Numbers {
+    width: 35rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#Analog--1 {
+    top: 5%;
+    right: 24%;
+}
+
+#Analog--2 {
+    top: 20%;
+    right: 5%;
+}
+
+#Analog--3 {
+    right: 0;
+}
+
+#Analog--4 {
+    bottom: 20%;
+    right: 5%;
+}
+
+#Analog--5 {
+    bottom: 5%;
+    right: 24%;
+}
+
+#Analog--6 {
+    bottom: 0;
+}
+
+#Analog--7 {
+    bottom: 5%;
+    left: 24%;
+}
+
+#Analog--8 {
+    bottom: 20%;
+    left: 5%;
+}
+
+#Analog--9 {
+    left: 0;
+}
+
+#Analog--10 {
+    left: 5%;
+    top: 20%;
+}
+
+#Analog--11 {
+    left: 24%;
+    top: 5%;
+}
+
+#Analog--12 {
+    top: 0;
+}
+
+#Analog--Clock__Hands {
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#Analog--Clock__Hour--Hand {
+    max-width: 100%;
+    padding: 0.8rem 5rem;
+}
+
+#Analog--Clock__Minute--Hand {
+    max-width: 100%;
+    padding: 0.4rem 6rem;
+}
+
+#Analog--Clock__Second--Hand {
+    max-width: 100%;
+    padding: 0.2rem 7rem;
+}
+
+.analog--digit {
+    position: absolute;
+    font-size: 3rem;
+}
+
+.analog--clock__hand {
+    background-color: #eee;
+    display: flex;
+    position: absolute;
+    transform-origin: right center;
+}
+
+.column--box {
+    display: block;
+    flex-direction: column;
 }
 
 .row--box {
@@ -55,4 +217,73 @@ main {
     padding: 0;
     margin: 0;
     font-size: 10rem;
+}
+
+.retro--digit {
+    width: auto;
+    height: 10rem;
+}
+
+.retro--digit__svg {
+    width: 100%;
+    height: 10rem;
+    fill: var(--retroNeutralClr);
+}
+
+.retro--span {
+    width: 100%;
+    height: 100%;
+    gap: 0;
+    margin-inline: auto;
+}
+
+.retro--on {
+    fill: var(--retroMainClr);
+    color: var(--retroMainClr);
+    font-size: 8rem;
+}
+
+.theme--button {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.spinAround {
+    animation: spinAround 5s;
+}
+
+.dropDown {
+    animation: dropDownNumber 0.5s;
+}
+
+@keyframes spinAround {
+    from {
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        top: inherit;
+        left: inherit;
+    }
+}
+
+@keyframes dropDownNumber {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 100%;
+    }
 }
